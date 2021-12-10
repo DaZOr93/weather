@@ -28,15 +28,17 @@ html[data-theme="night"] .weather {
   max-width: 900px;
   margin: 0 auto;
   padding: 1em;
+
 }
 
 .current {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .current__city {
   font-size: 3em;
+  cursor: pointer;
 }
 
 .current__description {
@@ -51,11 +53,11 @@ html[data-theme="night"] .weather {
 }
 .forecast__day__item{
   display: flex;
-
+  cursor: pointer;
 }
 .forecast__day__icon{
   width: 70px;
-  height: 50px;
+  height: 66px;
   background-size: 68px;
   background-repeat: no-repeat;
 }
@@ -71,7 +73,7 @@ html[data-theme="night"] .weather {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .forecast__item {
@@ -79,7 +81,7 @@ html[data-theme="night"] .weather {
 }
 
 .forecast__time, .forecast__icon {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .forecast__icon {
@@ -124,28 +126,19 @@ html.transition * {
   -webkit-transition-delay: 0 !important;
           transition-delay: 0 !important;
 }
-
-.icon__01d,
-.icon__01n,
-.icon__02d,
-.icon__02n,
-.icon__03d,
-.icon__03n,
-.icon__04d,
-.icon__04n,
-.icon__09d,
-.icon__09n,
-.icon__10d,
-.icon__10n,
-.icon__11n,
-.icon__11n,
-.icon__13d,
-.icon__13n,
-.icon__50d,
-.icon__50n {
-  background-size: 50px;
-  background-repeat: no-repeat;
+.forecast__day__item:hover, .active{
+  box-shadow: 0 0 24px;
+  border-radius: 15px;
 }
-
+#choice {
+  color: black;
+}
+.cityEditor button{
+  background: cadetblue;
+}
+.cityEditor {
+  display: none
+;
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -11,13 +11,20 @@
   <div class="weather">
     <div class="weather__inner">
       <div class="current">
-        <div class="current__city"> -- </div>
+        <div class="cityEditor">
+          <label for="choice">Введите город</label>
+          <input class="selectCity" oninput="loadCiyList(this)" list="cityList" id="choice" name="choice" />
+          <datalist id="cityList"></datalist>
+          <button onclick="saveCity()">Ok</button>
+          <button onclick="closeCityEditor()">Отмена</button>
+        </div>
+        <div onclick="openCityEditor()" class="current__city"> -- </div>
         <div class="current__description"> -- </div>
         <div class="current__temperature"> --˚</div>
       </div>
       <div class="details">
         <div class="details__row">
-          <div class="details__item feelslike">
+          <div class="details__item feelsLike">
             <div class="details__name">ощущается как</div>
             <div class="details__value"> --˚</div>
           </div>
@@ -39,7 +46,15 @@
       </div>
       <div class="forecast__day__description">Прогноз на 3 дня</div>
       <div class="forecast__day">
-        <div class="forecast__day__item">
+        <div onclick="selectWeatherDay(this)" class="forecast__day__item active">
+          <div class="forecast__day__icon"></div>
+          <div class="forecast__day__container">
+            <div class="forecast__data">2021-12-08</div>
+            <div class="forecast__condition">Ясно</div>
+            <div class="forecast__temperature"> 12˚ -16˚</div>
+          </div>
+        </div>
+        <div onclick="selectWeatherDay(this)"  class="forecast__day__item">
           <div class="forecast__day__icon"></div>
           <div class="forecast__day__container">
             <div class="forecast__data">2021-12-08</div>
@@ -48,16 +63,7 @@
           </div>
         </div>
 
-        <div class="forecast__day__item">
-          <div class="forecast__day__icon"></div>
-          <div class="forecast__day__container">
-            <div class="forecast__data">2021-12-08</div>
-            <div class="forecast__condition">Ясно</div>
-            <div class="forecast__temperature"> 12˚ -16˚</div>
-          </div>
-        </div>
-
-        <div class="forecast__day__item">
+        <div onclick="selectWeatherDay(this)"  class="forecast__day__item">
           <div class="forecast__day__icon"></div>
           <div class="forecast__day__container">
             <div class="forecast__data">2021-12-08</div>
