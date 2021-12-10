@@ -99,7 +99,6 @@ function loadCiyList(elm) {
 
 function addListCity(data) {
     let cityList = document.querySelector('#cityList');
-    console.log(data);
     if ((!isEmpty(data)) && (data.type !== 'Feature')) {
         cityList.innerHTML = '';
         for (let i = 0; i < data.features.length; i++) {
@@ -108,7 +107,6 @@ function addListCity(data) {
     } else if (data.type === 'Feature') {
         cityList.innerHTML = '';
         cityList.append(new Option(data.properties.name));
-
     } else {
         cityList.innerHTML = '';
     }
